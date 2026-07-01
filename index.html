@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- تسجيل الدخول -->
+    <form  class="login-container" id="login-container">
+      <div class="logo">تحرر</div>
+
+      <h2>تسجيل الدخول إلى الحساب</h2>
+      <p class="subtitle">يرجى إدخال بريدك الإلكتروني وكلمة المرور للمتابعة</p>
+
+      <form>
+        <div class="input-group">
+          <label for="email">البريد الإلكتروني</label>
+          <div class="input-wrapper">
+            <input
+              type="email"
+              id="email"
+              placeholder="user.user@gmail.com"
+              required
+            />
+            <i class="fa-regular fa-envelope icon-left"></i>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <div class="label-row">
+            <label for="password">كلمة المرور</label>
+            <a href="#" class="forgot-password" id="forgot-btn">نسيت كلمة المرور</a>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••"
+              required
+            />
+            <i class="fa-regular fa-eye-slash icon-left"></i>
+          </div>
+        </div>
+
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">تذكرني</label>
+        </div>
+
+        <button id="login-btn" type="submit" class="btn-submit">تسجيل الدخول</button>
+      </form>
+    </div>
+    <!-- قبل ارسال الرابط -->
+    <div class="login-container" id="forgot-password">
+      <div class="logo">تحرر</div>
+
+      <h2>نسيت كلمةالمرور؟</h2>
+      <p class="subtitle">
+        قم بإدخال بريدك الإلكتروني وسنقوم بإرسال رابط إعادة تعيين كلمة المرور
+      </p>
+
+      <form>
+        <div class="input-group">
+          <label for="email">البريد الإلكتروني</label>
+          <div class="input-wrapper">
+            <input
+              type="email"
+              id="email"
+              placeholder="user.user@gmail.com"
+              required
+            />
+            <i class="fa-regular fa-envelope icon-left"></i>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btn-after">المتابعة</button>
+      </form>
+    </div>
+    <!-- عند ارسال الرابط -->
+    <div class="login-container" id="after-send-link">
+      <div class="logo">تحرر</div>
+
+      <h2>تم إرسال الرابط</h2>
+      <p class="subtitle">
+        تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني. يرجى التحقق
+        من بريدك (بما في ذلك مجلد الرسائل غير المرغوب فيها) واتباع التعليمات
+        لتعيين كلمة مرور جديدة.
+      </p>
+
+      <form>
+        <div class="input-group">
+          <label for="email">البريد الإلكتروني</label>
+          <div class="input-wrapper">
+            <input
+              type="email"
+              id="email"
+              placeholder="user.user@gmail.com"
+              required
+            />
+            <i class="fa-regular fa-envelope icon-left"></i>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">اعادة الارسال</button>
+        <button type="button" class="btn-submit" id="back-to-login">
+          عودة لتسجيل الدخول
+        </button>
+      </form>
+    </div>
+    <!-- بعد فتح الرابط -->
+    <div class="login-container" id="reset-password-page">
+      <div class="logo">تحرر</div>
+
+      <h2>إعادة تعيين كلمة المرور</h2>
+      <p class="subtitle">
+        قم بتعيين كلمة مرور جديدة لحسابك حتى تتمكن من تسجيل الدخول
+      </p>
+
+      <form>
+        <div class="input-group">
+          <div class="label-row">
+            <label for="password">كلمة المرور الجديدة</label>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••"
+              required
+            />
+            <i class="fa-regular fa-eye-slash icon-left"></i>
+          </div>
+          <div class="label-row">
+            <label for="password">كلمة المرور الجديدة</label>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••"
+              required
+            />
+            <i class="fa-regular fa-eye-slash icon-left"></i>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">تأكيد</button>
+      </form>
+    </div>
+    <!-- الداشبورد -->
+<div style="display: none;" class="dashboard-wrapper" id="dashboard_wrapper">
+        
+        <aside class="sidebar">
+            <div class="sidebar-logo">تحرر</div>
+            <ul class="sidebar-menu">
+                <li class="menu-item active">
+                    <a href="#">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li class="menu-item" id="omola_btn">
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <span>إدارة العملاء</span>
+                    </a>
+                </li>
+                <li class="menu-item" id="akhsaieen_btn">
+                    <a href="#">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>إدارة الأخصائيين</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-regular fa-comments"></i>
+                        <span>الجلسات</span>
+                    </a>
+                </li>
+                <li class="menu-item has-dropdown">
+                    <a href="#">
+                        <div class="menu-link-content">
+                            <i class="fa-regular fa-folder-open"></i>
+                            <span>برامج الدعم</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>التقارير والإحصائيات</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-regular fa-message"></i>
+                        <span>إدارة المحادثات</span>
+                    </a>
+                </li>
+                <li class="menu-item has-dropdown">
+                    <a href="#">
+                        <div class="menu-link-content">
+                            <i class="fa-regular fa-bell"></i>
+                            <span>الإشعارات</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                </li>
+                <li class="menu-item has-dropdown">
+                    <a href="#">
+                        <div class="menu-link-content">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <span>الصفحات</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>الإعدادات</span>
+                    </a>
+                </li>
+                <li class="menu-item ">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>تسجيل الخروج</span>    
+                    </a>
+                </li>
+                <li class="menu-item logout-item">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right--bracket"></i>
+                          
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="main-layout">
+            <header class="top-navbar">
+                <nav>
+                    <div class="search-section">
+                        <div class="search-box">
+                            <input type="text" placeholder="إبحث عن أي شيء داخل المنصة">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="user-section">
+                        <div class="notification-trigger">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="count-badge">12</span>
+                        </div>
+                        
+                        <div class="profile-trigger">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="User Avatar" class="user-avatar">
+                            <div class="profile-text">
+                                <span class="greet-msg">مرحباً</span>
+                                <span class="profile-name">أيوب</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down arrow-indicator"></i>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="page-content">
+                <section class="monthly-summary">
+                    <div class="summary-header">
+                        <div class="summary-title-wrapper">
+                            <h2>ملخص الشهر</h2>
+                            <span class="sync-time">آخر تحديث: منذ 5 دقائق</span>
+                        </div>
+                        <span class="date-tag">يونيو 2025</span>
+                    </div>
+
+                    <div class="metrics-row">
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h3>5765</h3>
+                                <p>عدد المستخدمين</p>
+                            </div>
+                            <div class="metric-icon bg-teal">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h3>254</h3>
+                                <p>عدد الأخصائيين</p>
+                            </div>
+                            <div class="metric-icon bg-green">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h3>154</h3>
+                                <p>عدد الجلسات</p>
+                            </div>
+                            <div class="metric-icon bg-blue">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h3>254</h3>
+                                <p>عدد الدورات</p>
+                            </div>
+                            <div class="metric-icon bg-dark-teal">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-data">
+                                <h3>254</h3>
+                                <p>إجمالي الأرباح</p>
+                            </div>
+                            <div class="metric-icon bg-light-blue">
+                                <i class="fa-solid fa-money-bill-trend-up"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="view-reports-link">
+                        المزيد من التقارير <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                </section>
+
+                <div class="dashboard-grid">
+                    <section class="grid-block">
+                        <div class="block-top-bar">
+                            <h3><i class="fa-regular fa-comments"></i> أحدث الجلسات</h3>
+                            <span class="date-tag">يونيو 2025</span>
+                        </div>
+                        
+                        <div class="data-list">
+                            <div class="list-row">
+                                <div class="row-right-side">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" class="row-avatar">
+                                    <div class="row-info">
+                                        <h4>محمد علي</h4>
+                                        <p>مع الأخصائي: هاشم ناجي</p>
+                                    </div>
+                                </div>
+                                <div class="row-left-side">
+                                    <span class="amount-text">126 ر.س</span>
+                                    <span class="timestamp">منذ 5 دقائق</span>
+                                </div>
+                            </div>
+
+                            <div class="list-row">
+                                <div class="row-right-side">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" class="row-avatar">
+                                    <div class="row-info">
+                                        <h4>محمد علي</h4>
+                                        <p>مع الأخصائي: هاشم ناجي</p>
+                                    </div>
+                                </div>
+                                <div class="row-left-side">
+                                    <span class="amount-text">126 ر.س</span>
+                                    <span class="timestamp">منذ 5 دقائق</span>
+                                </div>
+                            </div>
+
+                            <div class="list-row">
+                                <div class="row-right-side">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" class="row-avatar">
+                                    <div class="row-info">
+                                        <h4>محمد علي</h4>
+                                        <p>مع الأخصائي: هاشم ناجي</p>
+                                    </div>
+                                </div>
+                                <div class="row-left-side">
+                                    <span class="amount-text">126 ر.س</span>
+                                    <span class="timestamp">منذ 5 دقائق</span>
+                                </div>
+                            </div>
+
+                            <div class="list-row">
+                                <div class="row-right-side">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" class="row-avatar">
+                                    <div class="row-info">
+                                        <h4>محمد علي</h4>
+                                        <p>مع الأخصائي: هاشم ناجي</p>
+                                    </div>
+                                </div>
+                                <div class="row-left-side">
+                                    <span class="amount-text">126 ر.س</span>
+                                    <span class="timestamp">منذ 5 دقائق</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="grid-block">
+                        <div class="block-top-bar">
+                            <h3><i class="fa-regular fa-bell"></i> التنبيهات</h3>
+                            <span class="date-tag">يونيو 2025</span>
+                        </div>
+
+                        <div class="data-list">
+                            <div class="list-row padding-lg">
+                                <div class="row-right-side">
+                                    <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <div class="row-info">
+                                        <p class="notification-message"><strong>سلمى محمد</strong> إشتركت في دورة التخلص من الإكتئاب</p>
+                                        <span class="timestamp">منذ 2 دقائق</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-row padding-lg">
+                                <div class="row-right-side">
+                                    <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <div class="row-info">
+                                        <p class="notification-message"><strong>سلمى محمد</strong> إشتركت في دورة التخلص من الإكتئاب</p>
+                                        <span class="timestamp">منذ 2 دقائق</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-row padding-lg">
+                                <div class="row-right-side">
+                                    <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <div class="row-info">
+                                        <p class="notification-message"><strong>سلمى محمد</strong> إشتركت في دورة التخلص من الإكتئاب</p>
+                                        <span class="timestamp">منذ 2 دقائق</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-row padding-lg">
+                                <div class="row-right-side">
+                                    <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <div class="row-info">
+                                        <p class="notification-message"><strong>سلمى محمد</strong> إشتركت في دورة التخلص من الإكتئاب</p>
+                                        <span class="timestamp">منذ 2 دقائق</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-row padding-lg">
+                                <div class="row-right-side">
+                                    <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <div class="row-info">
+                                        <p class="notification-message"><strong>سلمى محمد</strong> إشتركت في دورة التخلص من الإكتئاب</p>
+                                        <span class="timestamp">منذ 2 دقائق</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+    </div>
+    <!-- العملاء -->
+    <div style="display: none;"  class="dashboard-container" id="3mola">
+        <!-- فرز العميل يا رامي -->
+        <div style="display: none;" class="modal-overlay" id="fares_omala">
+    <div class="modal-container">
+        
+        <div class="modal-header">
+            <button class="modal-close-btn" id="close_fares">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+            <div class="modal-title">
+                <span>فرز العملاء حسب</span>
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+        </div>
+
+        <form  class="modal-form">
+            <div class="form-group">
+                <label>الجنس</label>
+                <div class="select-wrapper">
+                    <select>
+                        <option>الكل</option>
+                        <option>ذكر</option>
+                        <option>أنثى</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>الحالة الإجتماعية</label>
+                <div class="select-wrapper">
+                    <select>
+                        <option>الكل</option>
+                        <option>أعزب</option>
+                        <option>متزوج</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down select-arrow"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>تاريخ الميلاد</label>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="حدد التاريخ" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <i class="fa-regular fa-calendar input-icon"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>تاريخ فتح الحساب</label>
+                <div class="date-range-group">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="من" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <i class="fa-regular fa-calendar input-icon"></i>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="إلى" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <i class="fa-regular fa-calendar input-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button type="submit" class="btn-submit-filter">عرض النتائج</button>
+                <button type="button" class="btn-reset-filter">إعادة تعيين</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<!-- اضافة عميل يا خليل -->
+<div style="display: none;" class="user-creation-backdrop" id="add_omala">
+    <div class="user-creation-box">
+        
+        <div class="user-creation-header">
+            <button class="user-creation-close" id="close_add_omala">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+            <div class="user-creation-title">
+                <span>إضافة عميل</span>
+                <i class="fa-solid fa-circle-plus"></i>
+            </div>
+        </div>
+
+        <form class="user-creation-body">
+            <div class="field-container">
+                <label class="field-label">الإسم</label>
+                <div class="field-input-box">
+                    <input type="text" placeholder="الإسم">
+                    <i class="fa-regular fa-user field-icon"></i>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="field-label">البريد الإلكتروني</label>
+                <div class="field-input-box">
+                    <input type="email" placeholder="user.user@gmail.com">
+                    <i class="fa-regular fa-envelope field-icon"></i>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="field-label">رقم الجوال</label>
+                <div class="field-input-box">
+                    <input type="tel" placeholder="000 000 0000" style="text-align: right;">
+                    <i class="fa-solid fa-phone field-icon"></i>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="field-label">الجنس</label>
+                <div class="field-select-box">
+                    <select>
+                        <option value="" disabled selected hidden>حدد الجنس</option>
+                        <option>ذكر</option>
+                        <option>أنثى</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down field-arrow"></i>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="field-label">الحالة الإجتماعية</label>
+                <div class="field-select-box">
+                    <select>
+                        <option value="" disabled selected hidden>حدد الحالة الإجتماعية</option>
+                        <option>أعزب</option>
+                        <option>متزوج</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down field-arrow"></i>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="field-label">تاريخ الميلاد</label>
+                <div class="field-input-box">
+                    <input type="text" placeholder="حدد التاريخ" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <i class="fa-regular fa-calendar field-icon"></i>
+                </div>
+            </div>
+
+            <div class="user-creation-actions">
+                <button type="submit" class="btn-save-user">حفظ</button>
+                <button type="button" class="btn-cancel-user">إلغاء</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+        <aside class="sidebar-panel">
+            <div class="panel-logo">تحرر</div>
+            <nav class="navigation-menu">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item" id="omala_main">
+                        <a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="menu-text">الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item active">
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            <span class="menu-text">إدارة العملاء</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item" id="akhsaieen_omala">
+                        <a href="#">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span class="menu-text">إدارة الأخصائيين</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="#">
+                            <i class="fa-regular fa-comments"></i>
+                            <span class="menu-text">الجلسات</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item has-collapsible">
+                        <a href="#">
+                            <span class="group-title">
+                                <i class="fa-regular fa-folder-open"></i>
+                                <span class="menu-text">برامج الدعم</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down fold-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <span class="menu-text">التقارير والإحصائيات</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="#">
+                            <i class="fa-regular fa-message"></i>
+                            <span class="menu-text">إدارة المحادثات</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item has-collapsible">
+                        <a href="#">
+                            <span class="group-title">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="menu-text">الإشعارات</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down fold-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link-item has-collapsible">
+                        <a href="#">
+                            <span class="group-title">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <span class="menu-text">الصفحات</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down fold-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="menu-text">الإعدادات</span>
+                        </a>
+                    </li>
+                    <li class="nav-link-item terminate-link">
+                        <a href="#">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span class="menu-text">تسجيل الخروج</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="workspace-layout">
+            <header class="global-header">
+                <div class="header-wrapper">
+                    <div class="search-bar-box">
+                        <div class="search-input-group">
+                            <input type="text" placeholder="إبحث عن أي شيء داخل المنصة">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="identity-controls">
+                        <div class="notification-bell-box">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="alert-badge">12</span>
+                        </div>
+                        
+                        <div class="user-meta-dropdown">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Profile Avatar" class="profile-avatar">
+                            <div class="text-details">
+                                <span class="welcome-note">مرحباً</span>
+                                <span class="display-name">أيوب</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down expansion-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="workspace-body">
+                <div class="page-title-section">
+                    <div class="headline-container">
+                        <h2><i class="fa-solid fa-users"></i> إدارة العملاء <span class="records-count">( 245 عميل )</span></h2>
+                        <p class="section-subtext">إستعراض كافة العملاء</p>
+                    </div>
+                </div>
+
+                <div class="table-utilities">
+                    <div class="utilities-right">
+                        <button class="btn-create-user" id="add_omala_btn">
+                            <i class="fa-solid fa-plus"></i> إضافة مستخدم
+                        </button>
+                    </div>
+                    <div class="utilities-left">
+                        <div class="inline-search">
+                            <input type="text" placeholder="البحث عن عميل...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <button class="btn-filter-trigger" id="fares">
+                            <i class="fa-solid fa-sliders"></i> تصفية
+                        </button>
+                    </div>
+                </div>
+
+                <div class="data-table-wrapper">
+                    <table class="records-table">
+                        <thead>
+                            <tr>
+                                <th>الاسم</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>رقم الجوال</th>
+                                <th>الجنس</th>
+                                <th>الحالة الإجتماعية</th>
+                                <th>تاريخ الميلاد</th>
+                                <th class="text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">شيماء أبو القمبز</span>
+                                </td>
+                                <td class="cell-email">user.user@gmail.com</td>
+                                <td>059 524 9576</td>
+                                <td>أنثى</td>
+                                <td>أعزب</td>
+                                <td>5/5/2001</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">حسن العلي</span>
+                                </td>
+                                <td class="cell-email">hasan.ali@example.com</td>
+                                <td>058 123 4567</td>
+                                <td>ذكر</td>
+                                <td>متزوج</td>
+                                <td>10/10/1995</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">منال الخطيب</span>
+                                </td>
+                                <td class="cell-email">manal.khateeb@yahoo.com</td>
+                                <td>056 234 5678</td>
+                                <td>أنثى</td>
+                                <td>أعزب</td>
+                                <td>3/15/1998</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">علي زيد</span>
+                                </td>
+                                <td class="cell-email">ali.zayd@gmail.com</td>
+                                <td>054 345 6789</td>
+                                <td>ذكر</td>
+                                <td>أعزب</td>
+                                <td>7/25/1990</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">نورهان جابر</span>
+                                </td>
+                                <td class="cell-email">noorhan.jaber@hotmail.com</td>
+                                <td>053 456 7890</td>
+                                <td>أنثى</td>
+                                <td>متزوجة</td>
+                                <td>1/1/1993</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">سليم شاهين</span>
+                                </td>
+                                <td class="cell-email">saleem.shaheen@outlook.com</td>
+                                <td>052 567 8901</td>
+                                <td>ذكر</td>
+                                <td>أعزب</td>
+                                <td>9/30/1988</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">آمنة توفيق</span>
+                                </td>
+                                <td class="cell-email">amina.tawfiq@gmail.com</td>
+                                <td>051 678 9012</td>
+                                <td>أنثى</td>
+                                <td>متزوجة</td>
+                                <td>12/12/1992</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="cell-user-info">
+                                    <div class="table-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                                    <span class="client-title">آمنة توفيق</span>
+                                </td>
+                                <td class="cell-email">amina.tawfiq@gmail.com</td>
+                                <td>051 678 9012</td>
+                                <td>أنثى</td>
+                                <td>متزوجة</td>
+                                <td>12/12/1992</td>
+                                <td class="text-center"><button class="btn-row-actions"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination-footer">
+                    <div class="pagination-row">
+                        <button class="btn-page-nav"><i class="fa-solid fa-chevron-right"></i></button>
+                        <span class="page-number">12</span>
+                        <span class="pagination-dots">. . .</span>
+                        <span class="page-number">2</span>
+                        <span class="page-number active">1</span>
+                        <button class="btn-page-nav"><i class="fa-solid fa-chevron-left"></i></button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+    <!-- الاخصائيين -->
+     <div style="display: none;"  class="expert-system-wrapper" id="akhsaieen">
+        <div style="display: none;" class="expert-filter-overlay" id="filter_akhisai">
+    <div class="expert-filter-dialog">
+        
+        <div class="expert-filter-header">
+            <button class="expert-filter-close-btn" id="close_filter_akhisai">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+            <div class="expert-filter-title-group">
+                <span>فرز الأخصائيين حسب</span>
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+        </div>
+        <!-- فلتر الاخصائي يرامي -->
+        <form  class="expert-filter-form"  >
+            <div class="expert-form-row">
+                <label>التخصص</label>
+                <div class="expert-select-custom">
+                    <select>
+                        <option>اختر التخصص</option>
+                        <option>طبيب</option>
+                        <option>أخصائي نفسي</option>
+                        <option>أخصائي إجتماعي</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down expert-select-arrow"></i>
+                </div>
+            </div>
+
+            <div class="expert-form-row">
+                <label>الخبرة</label>
+                <div class="expert-input-custom">
+                    <input type="text" placeholder="حدد الخبرة">
+                </div>
+            </div>
+
+            <div class="expert-form-row">
+                <label>الدولة</label>
+                <div class="expert-select-custom">
+                    <select>
+                        <option>اختر الدولة</option>
+                        <option>السعودية</option>
+                        <option>الإمارات</option>
+                        <option>الكويت</option>
+                        <option>مصر</option>
+                        <option>الأردن</option>
+                        <option>البحرين</option>
+                        <option>فلسطين</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down expert-select-arrow"></i>
+                </div>
+            </div>
+
+            <div class="expert-form-row">
+                <label>تاريخ فتح الحساب</label>
+                <div class="expert-date-grid">
+                    <div class="expert-input-custom">
+                        <input type="text" placeholder="من" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <i class="fa-regular fa-calendar expert-input-icon"></i>
+                    </div>
+                    <div class="expert-input-custom">
+                        <input type="text" placeholder="إلى" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        <i class="fa-regular fa-calendar expert-input-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-filter-buttons">
+                <button type="submit" class="btn-expert-apply">عرض النتائج</button>
+                <button type="button" class="btn-expert-clear">إعادة تعيين</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+        <aside class="expert-sidebar">
+            <div class="expert-brand-logo">تحرر</div>
+            <nav class="expert-nav-container">
+                <ul class="expert-menu-group">
+                    <li class="expert-menu-item" id="ahkisaii_main">
+                        <a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="expert-menu-text">الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item" id="omala_btn_akisaii">
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            <span class="expert-menu-text">إدارة العملاء</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item active-expert-link">
+                        <a href="#">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span class="expert-menu-text">إدارة الأخصائيين</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item">
+                        <a href="#">
+                            <i class="fa-regular fa-comments"></i>
+                            <span class="expert-menu-text">الجلسات</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item expert-has-submenu">
+                        <a href="#">
+                            <span class="expert-submenu-title">
+                                <i class="fa-regular fa-folder-open"></i>
+                                <span class="expert-menu-text">برامج الدعم</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down expert-arrow-toggle"></i>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <span class="expert-menu-text">التقارير والإحصائيات</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item">
+                        <a href="#">
+                            <i class="fa-regular fa-message"></i>
+                            <span class="expert-menu-text">إدارة المحادثات</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item expert-has-submenu">
+                        <a href="#">
+                            <span class="expert-submenu-title">
+                                <i class="fa-regular fa-bell"></i>
+                                <span class="expert-menu-text">الإشعارات</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down expert-arrow-toggle"></i>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item expert-has-submenu">
+                        <a href="#">
+                            <span class="expert-submenu-title">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <span class="expert-menu-text">الصفحات</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down expert-arrow-toggle"></i>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item">
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="expert-menu-text">الإعدادات</span>
+                        </a>
+                    </li>
+                    <li class="expert-menu-item expert-logout-item">
+                        <a href="#">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span class="expert-menu-text">تسجيل الخروج</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="expert-main-layout">
+            
+            <header class="expert-top-header">
+                <div class="expert-header-inside">
+                    <div class="expert-search-container">
+                        <div class="expert-search-field">
+                            <input type="text" placeholder="إبحث عن أي شيء داخل المنصة">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="expert-profile-widgets">
+                        <div class="expert-bell-container">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="expert-alert-count">12</span>
+                        </div>
+                        
+                        <div class="expert-account-trigger">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Profile" class="expert-user-photo">
+                            <div class="expert-account-text">
+                                <span class="expert-welcome">مرحباً</span>
+                                <span class="expert-username">أيوب</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down expert-dropdown-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="expert-content-body">
+                <div class="specialist-heading-panel">
+                    <div class="specialist-title-box">
+                        <h2><i class="fa-solid fa-user-tie"></i> إدارة الأخصائيين <span class="specialist-total-badge">( 154 أخصائي )</span></h2>
+                        <p class="specialist-subtitle">إستعراض كافة الأخصائيين</p>
+                    </div>
+                </div>
+
+                <div class="specialist-filter-bar">
+                    <div class="specialist-actions-right">
+                        <button class="btn-add-specialist">
+                            <i class="fa-solid fa-plus"></i> إضافة أخصائي
+                        </button>
+                    </div>
+                    <div class="specialist-controls-left">
+                        <div class="specialist-search-box">
+                            <input type="text" placeholder="البحث عن أخصائي...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <button class="btn-specialist-filter" id="filter_akhisai_btn">
+                            <i class="fa-solid fa-sliders"></i> تصفية
+                        </button>
+                    </div>
+                </div>
+
+                <div class="specialist-table-card">
+                    <table class="specialist-data-table">
+                        <thead>
+                            <tr>
+                                <th>الأسم</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>رقم الجوال</th>
+                                <th>التخصص</th>
+                                <th>الخبرة</th>
+                                <th>الدولة</th>
+                                <th class="specialist-actions-th"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">هاشم ناجي</span>
+                                </td>
+                                <td class="specialist-email-cell">user.user@gmail.com</td>
+                                <td class="specialist-phone-cell">059 524 9576</td>
+                                <td>طبيب</td>
+                                <td>15 سنة</td>
+                                <td>السعودية</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">ليلى السعيد</span>
+                                </td>
+                                <td class="specialist-email-cell">leila.saeed@email.com</td>
+                                <td class="specialist-phone-cell">059 123 4567</td>
+                                <td>أخصائي نفسي</td>
+                                <td>10 سنوات</td>
+                                <td>الإمارات</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">علي العلي</span>
+                                </td>
+                                <td class="specialist-email-cell">ali.ali@email.com</td>
+                                <td class="specialist-phone-cell">058 987 6543</td>
+                                <td>أخصائي إجتماعي</td>
+                                <td>8 سنوات</td>
+                                <td>الكويت</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">سارة خالد</span>
+                                </td>
+                                <td class="specialist-email-cell">sara.khaled@email.com</td>
+                                <td class="specialist-phone-cell">057 456 7890</td>
+                                <td>أخصائي نفسي</td>
+                                <td>5 سنوات</td>
+                                <td>مصر</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">يوسف أحمد</span>
+                                </td>
+                                <td class="specialist-email-cell">yousef.ahmed@email.com</td>
+                                <td class="specialist-phone-cell">056 321 0987</td>
+                                <td>أخصائي نفسي</td>
+                                <td>3 سنوات</td>
+                                <td>الأردن</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">منى عبدالله</span>
+                                </td>
+                                <td class="specialist-email-cell">mona.abdullah@email.com</td>
+                                <td class="specialist-phone-cell">055 654 3210</td>
+                                <td>أخصائي إجتماعي</td>
+                                <td>12 سنة</td>
+                                <td>البحرين</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">عمر فؤاد</span>
+                                </td>
+                                <td class="specialist-email-cell">omar.fouad@email.com</td>
+                                <td class="specialist-phone-cell">054 987 1234</td>
+                                <td>أخصائي نفسي</td>
+                                <td>7 سنوات</td>
+                                <td>فلسطين</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="specialist-profile-cell">
+                                    <div class="specialist-avatar-circle"><i class="fa-solid fa-user-tie"></i></div>
+                                    <span class="specialist-fullname">عمر فؤاد</span>
+                                </td>
+                                <td class="specialist-email-cell">omar.fouad@email.com</td>
+                                <td class="specialist-phone-cell">054 987 1234</td>
+                                <td>أخصائي نفسي</td>
+                                <td>7 سنوات</td>
+                                <td>فلسطين</td>
+                                <td class="specialist-options-cell"><button class="btn-specialist-more"><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="specialist-pagination">
+                    <div class="specialist-page-container">
+                        <button class="btn-specialist-page"><i class="fa-solid fa-chevron-right"></i></button>
+                        <span class="specialist-num">12</span>
+                        <span class="specialist-dots">. . .</span>
+                        <span class="specialist-num">2</span>
+                        <span class="specialist-num specialist-active-page">1</span>
+                        <button class="btn-specialist-page"><i class="fa-solid fa-chevron-left"></i></button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+ 
